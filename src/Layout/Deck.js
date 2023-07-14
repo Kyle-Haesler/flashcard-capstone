@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import { Switch, Route, useParams, useHistory, Link } from "react-router-dom";
 import { readDeck, deleteDeck, deleteCard } from "../utils/api";
 import Study from "./Study";
+import EditDeck from "./EditDeck"
 
 function Deck(){
 // get the deck Id from the URL
@@ -78,6 +79,9 @@ return (
     </Route>
     <Route exact path="/decks/:deckId/study">
         <Study deck={deck}/>
+    </Route>
+    <Route exact path="/decks/:deckId/edit">
+        <EditDeck deck={deck} />
     </Route>
     </Switch>
     </>
