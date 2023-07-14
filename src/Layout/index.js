@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import CreateDeckButton from "./CreateDeckButton";
 import DeckList from "./DeckList";
 import Deck from "./Deck";
+import CreateDeck from "./CreateDeck";
 
 function Layout() {
   return (
@@ -15,6 +16,9 @@ function Layout() {
           <Route exact path="/">
             <CreateDeckButton />
             <DeckList />
+          </Route>
+          <Route exact path="/decks/new">
+            <CreateDeck />
           </Route>
           <Route path="/decks/:deckId">
             <Deck />
