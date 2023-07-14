@@ -3,6 +3,7 @@ import { Switch, Route, useParams, useHistory, Link } from "react-router-dom";
 import { readDeck, deleteDeck, deleteCard } from "../utils/api";
 import Study from "./Study";
 import EditDeck from "./EditDeck"
+import AddCard from "./AddCard"
 
 function Deck(){
 // get the deck Id from the URL
@@ -82,6 +83,9 @@ return (
     </Route>
     <Route exact path="/decks/:deckId/edit">
         <EditDeck deck={deck} />
+    </Route>
+    <Route exact path="/decks/:deckId/cards/new">
+        <AddCard deck={deck} />
     </Route>
     </Switch>
     </>
