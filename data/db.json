@@ -13,21 +13,21 @@
   ],
   "cards": [
     {
+      "front": "sadfsadf",
+      "back": "asdfsfafsdfsdfs",
       "id": 1,
-      "front": "Differentiate between Real DOM and Virtual DOM.",
-      "back": "Virtual DOM updates are faster but do not directly update the HTML",
-      "deckId": 1
+      "deckId": "1"
     },
     {
+      "front": "dfsagsfadfsda",
+      "back": "sadfsafasd",
       "id": 2,
-      "front": "How do you modify the state of a different React component?",
-      "back": "Not at all! State is visible to the component only.",
-      "deckId": 1
+      "deckId": "1"
     },
     {
-      "id": 3,
       "front": "How do you pass data 'down' to a React child component?",
-      "back": "As properties or props",
+      "back": "As properties or propsdsfgdfsgsdfgfs",
+      "id": 3,
       "deckId": 1
     },
     {
@@ -43,11 +43,88 @@
       "id": 5
     },
     {
-      "cards": [],
-      "front": "b",
-      "back": "b",
+      "front": "",
+      "back": "",
       "deckId": 1,
-      "id": 7
+      "id": 17
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 1,
+      "id": 18
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 1,
+      "id": 19
+    },
+    {
+      "front": "sdfsadfa",
+      "back": "asdfsaf",
+      "id": 20,
+      "deckId": "1"
+    },
+    {
+      "front": "I am no longer a potato!",
+      "back": "you are the potato!",
+      "id": 21,
+      "deckId": "1"
+    },
+    {
+      "front": "This should change the card! ",
+      "back": "But it probably wont!",
+      "id": 22,
+      "deckId": "1"
+    },
+    {
+      "front": "asdfsdfafsdafasd",
+      "back": "fasdfsdafa",
+      "id": 23,
+      "deckId": "1"
+    },
+    {
+      "front": "sdfsdafsdaf",
+      "back": "asdfsfsafsa",
+      "id": 24,
+      "deckId": "1"
+    },
+    {
+      "front": "ghfhdfgh",
+      "back": "fdghfgdhd",
+      "id": 25,
+      "deckId": "1"
+    },
+    {
+      "front": "sdfsdfdas",
+      "back": "asdfsfa",
+      "deckId": 1,
+      "id": 26
+    },
+    {
+      "front": "sdfsdfdas",
+      "back": "asdfsfadsfgdsgsg",
+      "id": 27,
+      "deckId": 1
+    },
+    {
+      "front": "This is now the card I am changing to make sure it actually changed!",
+      "back": "Please change correctly!",
+      "id": 28,
+      "deckId": "1"
+    },
+    {
+      "front": "I really hope this changes!",
+      "back": "Please!",
+      "id": 29,
+      "deckId": "1"
+    },
+    {
+      "front": "New Card!! Lets go! I am going to edit this sucker!!",
+      "back": "Please work!",
+      "id": 30,
+      "deckId": 1
     }
   ]
 }

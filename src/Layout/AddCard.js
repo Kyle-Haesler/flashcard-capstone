@@ -14,12 +14,18 @@ const initialFormState = {
     back: "",
     deckId: deckId
 }
-const [formData, setFormData] =useState({...initialFormState})
+const [formData, setFormData] = useState({...initialFormState})
 // set variables consistent with the form 
 const name1 = "Done"
 const name2 = "Save"
 const placeholder1 = "Front side of card"
 const placeholder2 = "Back side of card"
+
+// handle change
+const handleChange = ({target}) => {
+    setFormData({...formData, [target.name]: target.value})
+}
+
 
 // handle submit event
 
@@ -27,9 +33,9 @@ const handleSubmit = (event) => {
     event.preventDefault()
     createCard(deckId, formData)
     setFormData({...initialFormState})
+    
 }
-    
-    
+     
     if(!deck.cards){
         return <p>Loading...</p>
     }
@@ -43,7 +49,9 @@ const handleSubmit = (event) => {
         </ol>
     </nav>
     <h1>{deck.name}: Add Card</h1>
-    <CardForm initialFormState={initialFormState} handleSubmit={handleSubmit} name1={name1} name2={name2} placeholder1={placeholder1} placeholder2={placeholder2} deckId={deckId} />
+    <hr />
+    <CardForm 
+    handleSubmit={handleSubmit} handleChange={handleChange} value1={formData.front} value2={formData.back} name1={name1} name2={name2} placeholder1={placeholder1} placeholder2={placeholder2} deckId={deckId} />
     </>
     )
 }

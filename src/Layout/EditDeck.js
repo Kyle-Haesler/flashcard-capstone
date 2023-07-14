@@ -39,11 +39,12 @@ if(!deck){
         </ol>
     </nav>
     <h1>Edit Deck</h1>
+    <hr />
     <form onSubmit={handleSubmit}>
         <h4>Name</h4>
-        <input id="name" type="text" name="name" value={formData.name} onChange={handleChange} />
+        <input style={{width: "100%"}} id="name" type="text" name="name" value={formData.name} onChange={handleChange} />
         <h4>Description</h4>
-        <textarea name="description" value={formData.description} onChange={handleChange}></textarea>
+        <textarea style={{width: "100%", height: "150px"}} name="description" value={formData.description} onChange={handleChange}></textarea>
         <button type="button" className="btn btn-secondary" onClick={() => history.push(`/decks/${deckId}`)}>Cancel</button>
         <button type="submit" className="btn btn-primary">Submit</button>
      </form>

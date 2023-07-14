@@ -4,6 +4,7 @@ import { readDeck, deleteDeck, deleteCard } from "../utils/api";
 import Study from "./Study";
 import EditDeck from "./EditDeck"
 import AddCard from "./AddCard"
+import EditCard from "./EditCard"
 
 function Deck(){
 // get the deck Id from the URL
@@ -86,6 +87,9 @@ return (
     </Route>
     <Route exact path="/decks/:deckId/cards/new">
         <AddCard deck={deck} />
+    </Route>
+    <Route exact path="/decks/:deckId/cards/:cardId/edit">
+        <EditCard deck={deck} />
     </Route>
     </Switch>
     </>
