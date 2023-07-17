@@ -6,7 +6,8 @@ import CreateDeckButton from "./CreateDeckButton";
 import DeckList from "./DeckList";
 import Deck from "./Deck";
 import CreateDeck from "./CreateDeck";
-
+// Home page that will show the header (will always be shown), the createDeckButton and the DeckList
+// All routes that start with deck will be routed from here
 function Layout() {
   return (
     <>

@@ -10,7 +10,7 @@ function Deck(){
 // get the deck Id from the URL
 const {deckId} = useParams()
 const history = useHistory()
-// use readDeck function to get proper deck utilizing useState and useEffect, dependency will be deckId
+// use readDeck function to get proper deck utilizing useState and useEffect, dependency will be deckId. This will be passed down to multiple components.
 const [deck, setDeck] = useState([])
 useEffect(() => {
     const abortController = new AbortController()
