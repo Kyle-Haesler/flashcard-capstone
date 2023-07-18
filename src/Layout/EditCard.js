@@ -51,7 +51,8 @@ function EditCard({ deck }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     updateCard(formData);
-    history.push(`/decks/${deckId}`);
+    history.push(`/decks/${deckId}`)
+    history.go("0");
   };
 
   if (!formData || !card) {
