@@ -12,8 +12,6 @@ import { listDecks } from "../utils/api";
 function Layout() {
   // establish state and then call listDecks to get the deck information and pass that down to DeckList
   const [allData, setAllData] = useState([])
-  // establish location to make sure we are fetching the deck list everytime we change urls to make sure everything is updated
-  const location = useLocation()
   useEffect(() => {
     const abortController = new AbortController
     async function fetchAllData(){
@@ -28,7 +26,7 @@ function Layout() {
     return () => {
       abortController.abort()
     }
-  }, [location.pathname])
+  }, [])
   
   return (
     <>
