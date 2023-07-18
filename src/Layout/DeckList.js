@@ -1,26 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { listDecks, deleteDeck } from "../utils/api";
+import { deleteDeck } from "../utils/api";
 
-function DeckList() {
-  // establish history as well as make an api call using listDeck and utilize useState
+function DeckList({allData}) {
+  // establish history 
   const history = useHistory();
-  const [allData, setAllData] = useState([]);
-  useEffect(() => {
-    const abortController = new AbortController();
-    async function fetchAllData() {
-      try {
-        const data = await listDecks(abortController.signal);
-        setAllData(data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchAllData();
-    return () => {
-      abortController.abort();
-    };
-  }, []);
+
   // handleDelete function
   const handleDelete = (id) => {
     const confirmed = window.confirm(
