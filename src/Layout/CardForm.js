@@ -40,7 +40,10 @@ function CardForm({
         <button
           type="button"
           className="btn btn-secondary"
-          onClick={() => history.push(`/decks/${deckId}`)}
+          onClick={() => {
+            history.push(`/decks/${deckId}`);
+            history.go(0);
+          }}
         >
           {name1}
         </button>

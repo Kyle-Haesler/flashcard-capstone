@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import { Switch, Route, useParams, useHistory, Link } from "react-router-dom";
+import { Switch, Route, useParams, useHistory, Link, useLocation } from "react-router-dom";
 import { readDeck, deleteDeck, deleteCard } from "../utils/api";
 import Study from "./Study";
 import EditDeck from "./EditDeck"
@@ -10,6 +10,7 @@ function Deck(){
 // get the deck Id from the URL
 const {deckId} = useParams()
 const history = useHistory()
+const location = useLocation()
 // use readDeck function to get proper deck utilizing useState and useEffect, dependency will be deckId. This will be passed down to multiple components.
 const [deck, setDeck] = useState([])
 useEffect(() => {
@@ -26,13 +27,14 @@ useEffect(() => {
     return () => {
         abortController.abort()
     }
-}, [deckId])
+}, [deckId, location.pathname])
 // deal with deleting deck
 const handleDeckDelete = (id) => {
     const confirmed = window.confirm("Delete this deck? You will not be able to recover it.")
     if(confirmed){
         deleteDeck(id)
         history.push("/")
+        history.go(0)
     }
 }
 // deal with deleting a card
