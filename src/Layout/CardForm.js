@@ -42,7 +42,6 @@ function CardForm({
           className="btn btn-secondary"
           onClick={() => {
             history.push(`/decks/${deckId}`);
-            history.go(0);
           }}
         >
           {name1}
