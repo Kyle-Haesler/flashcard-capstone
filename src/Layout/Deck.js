@@ -10,6 +10,8 @@ function Deck(){
 // get the deck Id from the URL
 const {deckId} = useParams()
 const history = useHistory()
+// use location to make this API call everytime the url changes to ensure we have the most uptodate information
+const location = useLocation()
 // use readDeck function to get proper deck utilizing useState and useEffect, dependency will be deckId. This will be passed down to multiple components.
 const [deck, setDeck] = useState([])
 useEffect(() => {
@@ -26,7 +28,7 @@ useEffect(() => {
     return () => {
         abortController.abort()
     }
-}, [deckId])
+}, [deckId, location.pathName])
 // deal with deleting deck
 const handleDeckDelete = (id) => {
     const confirmed = window.confirm("Delete this deck? You will not be able to recover it.")
