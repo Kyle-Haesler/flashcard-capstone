@@ -33,7 +33,7 @@ function AddCard({ deck }) {
     createCard(deckId, formData);
     setFormData({ ...initialFormState });
     history.push(`/decks/${deckId}`)
-    history.go("0")
+    history.go(0)
   };
 
   if (!deck.cards) {

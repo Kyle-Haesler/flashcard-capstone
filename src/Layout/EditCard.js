@@ -52,7 +52,7 @@ function EditCard({ deck }) {
     event.preventDefault();
     updateCard(formData);
     history.push(`/decks/${deckId}`)
-    history.go("0");
+    history.go(0);
   };
 
   if (!formData || !card) {
